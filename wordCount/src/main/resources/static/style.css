@@ -1,0 +1,16 @@
+.jumbotron{
+    height: 100vh;
+    text-align: center;
+}
+
+.btn{
+    margin-top: 20px;
+}
+
+form{
+   margin: 50px;
+}
+
+input[type=file] {
+    margin: 0 auto;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="UTF-8">
+<meta name="author" content="Ernesta Duglas">
+<meta name="description" content="Word counter in multiple filies">
+<title>Word Count</title>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div class="jumbotron">
+		<div class="container">
+			<div class="row">
+				<h1>Welcome to WordCount!</h1>
+				<h3>Count words in your files. Try it now!</h3>
+				<div>
+					<form method="POST" enctype="multipart/form-data">
+						<input id="input" type="file" name="files" multiple /> <input
+							class="btn btn-success btn-lg" type="submit" value="Count" />
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
