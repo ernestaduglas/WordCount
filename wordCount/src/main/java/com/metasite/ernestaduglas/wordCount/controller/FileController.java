@@ -40,14 +40,14 @@ public class FileController {
 
 	@RequestMapping(path = "/download", method = RequestMethod.GET)
 	public @ResponseBody void getProcessedFiles(HttpServletResponse response) {
-		File file = new File(FileService.getZipedFile());
+		File file = new File(FileService.getZippedFile());
 		InputStream input = null;
 		try {
 			input = new FileInputStream(file);
 		} catch (FileNotFoundException e) {
 			e.getMessage();
 		}
-		response.setContentType(FileService.getZipedFile());
+		response.setContentType(FileService.getZippedFile());
 		response.setHeader("Content-Disposition", "attachment; filename=" + file.getName());
 		response.setHeader("Content-Length", String.valueOf(file.length()));
 		try {

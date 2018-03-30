@@ -29,7 +29,7 @@ import com.metasite.ernestaduglas.wordCount.model.SortAndWriteToFileThread;
 public class FileService {
 	private static final String UPLOADED_FILES_DIR = System.getProperty("user.home") + "//wordcount//uploaded//";
 	private static final String COMPLETED_FILES_DIR = System.getProperty("user.home") + "//wordcount//completed//";
-	private static final String ZIPED_FILE = System.getProperty("user.home") + "//wordcount//wordcount.zip";
+	private static final String ZIPPED_FILE = System.getProperty("user.home") + "//wordcount//wordcount.zip";
 	private Map<String, Integer> allFilesWordCount = new HashMap<String, Integer>();
 	@Autowired
 	private ThreadPoolTaskExecutor threadPool;
@@ -89,7 +89,7 @@ public class FileService {
 	}
 
 	public void zipProcessedFiles() throws IOException {
-		FileOutputStream fileOut = new FileOutputStream(ZIPED_FILE);
+		FileOutputStream fileOut = new FileOutputStream(ZIPPED_FILE);
 		ZipOutputStream zipOut = new ZipOutputStream(fileOut);
 
 		for (File file : new File(COMPLETED_FILES_DIR).listFiles()) {
@@ -115,8 +115,8 @@ public class FileService {
 		}
 	}
 
-	public static String getZipedFile() {
-		return ZIPED_FILE;
+	public static String getZippedFile() {
+		return ZIPPED_FILE;
 	}
 
 }
